@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
 // dt-formatter: indent = "  "
@@ -234,7 +235,7 @@
       >;
     };
 
-    Mouse {
+    MouseLayer {
       bindings = <
         &trans  &trans      &trans     &trans      &trans       &trans        &trans  &trans      &trans    &trans  &trans  &trans
         &trans  &none       &trans     &trans      &trans       &trans        &trans  &trans      &trans    &trans  &trans  &trans
@@ -254,10 +255,10 @@
 
     Media {
       bindings = <
-        &trans      &none         &kp K_MUTE    &kp C_VOL_UP       &kp K_MUTE        &none           &trans  &trans      &trans    &trans  &trans  &trans
-        &trans      &none         &kp C_REWIND  &kp C_VOLUME_DOWN  &kp C_FF          &none           &trans  &trans      &trans    &trans  &trans  &trans
-        &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3      &bt BT_SEL 4    &trans  &medialock  &funlock  &trans  &trans  &trans
-                                                &kp K_MUTE         &kp K_PLAY_PAUSE  &kp K_STOP      &trans  &trans      &trans
+        &out OUT_USB  &none         &kp K_MUTE    &kp C_VOL_UP       &kp K_MUTE        &none           &trans  &trans      &trans    &trans  &trans  &trans
+        &out OUT_BLE  &none         &kp C_REWIND  &kp C_VOLUME_DOWN  &kp C_FF          &none           &trans  &trans      &trans    &trans  &trans  &trans
+        &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3      &bt BT_SEL 4    &trans  &medialock  &funlock  &trans  &trans  &trans
+                                                  &kp K_MUTE         &kp K_PLAY_PAUSE  &kp K_STOP      &trans  &trans      &trans
       >;
     };
 
