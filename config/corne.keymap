@@ -235,12 +235,12 @@
       >;
     };
 
-    MouseLayer {
+    Mouse {
       bindings = <
         &trans  &trans      &trans     &trans      &trans       &trans        &trans  &trans      &trans    &trans  &trans  &trans
         &trans  &none       &trans     &trans      &trans       &trans        &trans  &trans      &trans    &trans  &trans  &trans
         &trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_REDO    &trans  &mouselock  &symlock  &trans  &trans  &trans
-                                       &none       &none        &none         &trans  &trans      &trans
+                                       &mkp MB3    &mkp MB1     &mkp MB2      &trans  &trans      &trans
       >;
     };
 
