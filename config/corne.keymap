@@ -212,7 +212,7 @@
       label = "Base";
       bindings = <
         &kp LALT   &kp Q           &kp W           &kp F               &kp P             &kp B        &kp J        &kp L              &kp U                &kp Y            &kp SQT     &kp RALT
-        &kp LSHFT  &mt LEFT_WIN A  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G        &kp M        &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E  &mt RIGHT_ALT I  &mt RWIN O  &gaminglayer
+        &kp LSHFT  &tph LEFT_WIN A  &tph LEFT_ALT R  &tph LEFT_CONTROL S  &tph LEFT_SHIFT T  &kp G        &kp M        &tph RIGHT_SHIFT N  &tph RIGHT_CONTROL E  &tph RIGHT_ALT I  &tph RWIN O  &gaminglayer
         &kp LCTRL  &kp Z           &kp X           &kp C               &kp D             &kp V        &kp K        &kp H              &kp COMMA            &kp DOT          &kp FSLH    &kp RCTRL
                                                    &lt 1 ESC           &lt 2 SPACE       &lt 3 TAB    &lt 5 ENTER  &lt 6 BACKSPACE    &lt 7 DEL
       >;
@@ -252,7 +252,7 @@
       label = "Base";
       bindings = <
         &kp LALT   &kp Q           &kp W           &kp F               &kp P             &kp B        &kp J        &kp L              &kp U                &kp Y            &kp SQT     &kp RALT
-        &kp LSHFT  &mt LEFT_WIN A  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G        &kp M        &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E  &mt RIGHT_ALT I  &mt RWIN O  &gaminglayer
+        &kp LSHFT  &tph LEFT_WIN A  &tph LEFT_ALT R  &tph LEFT_CONTROL S  &tph LEFT_SHIFT T  &kp G        &kp M        &tph RIGHT_SHIFT N  &tph RIGHT_CONTROL E  &tph RIGHT_ALT I  &tph RWIN O  &gaminglayer
         &kp LCTRL  &kp Z           &kp X           &kp C               &kp D             &kp V        &kp K        &kp H              &kp COMMA            &kp DOT          &kp FSLH    &kp RCTRL
                                                    &lt 1 ESC           &lt 2 SPACE       &lt 3 TAB    &lt 5 ENTER  &lt 6 BACKSPACE    &lt 7 DEL
       >;
