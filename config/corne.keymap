@@ -147,42 +147,42 @@
       compatible = "zmk,behavior-tap-dance";
       label = "FUNLOCK";
       #binding-cells = <0>;
-      bindings = <&trans>, <&to 1>;
+      bindings = <&trans>, <&tog 1>;
     };
 
     numlock: numlock {
       compatible = "zmk,behavior-tap-dance";
       label = "NUMLOCK";
       #binding-cells = <0>;
-      bindings = <&trans>, <&to 2>;
+      bindings = <&trans>, <&tog 2>;
     };
 
     symlock: symlock {
       compatible = "zmk,behavior-tap-dance";
       label = "SYMLOCK";
       #binding-cells = <0>;
-      bindings = <&trans>, <&to 3>;
+      bindings = <&trans>, <&tog 3>;
     };
 
     mouselock: mouselock {
       compatible = "zmk,behavior-tap-dance";
       label = "MOUSELOCK";
       #binding-cells = <0>;
-      bindings = <&trans>, <&to 5>;
+      bindings = <&trans>, <&tog 5>;
     };
 
     navlock: navlock {
       compatible = "zmk,behavior-tap-dance";
       label = "NAVLOCK";
       #binding-cells = <0>;
-      bindings = <&trans>, <&to 6>;
+      bindings = <&trans>, <&tog 6>;
     };
 
     medialock: medialock {
       compatible = "zmk,behavior-tap-dance";
       label = "MEDIALOCK";
       #binding-cells = <0>;
-      bindings = <&trans>, <&to 7>;
+      bindings = <&trans>, <&tog 7>;
     };
 
     gaminglayer: gaminglayer {
@@ -261,30 +261,30 @@
     Mouse {
       label = "Mouse";
       bindings = <
-        &trans  &trans      &trans     &trans      &trans       &trans        &trans  &trans      &trans    &trans  &trans  &trans
-        &trans  &none       &trans     &trans      &trans       &trans        &trans  &trans      &trans    &trans  &trans  &trans
-        &trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_REDO    &trans  &mouselock  &symlock  &trans  &trans  &trans
-                                       &mkp MB3    &mkp MB1     &mkp MB2      &trans  &trans      &trans
+        &trans  &trans      &trans     &trans      &trans       &trans        &trans  &base_dance  &trans    &trans  &trans  &trans
+        &trans  &none       &trans     &trans      &trans       &trans        &trans  &trans       &trans    &trans  &trans  &trans
+        &trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_REDO    &trans  &mouselock   &symlock  &trans  &trans  &trans
+                                       &mkp MB3    &mkp MB1     &mkp MB2      &trans  &trans       &trans
       >;
     };
 
     Nav {
       label = "Nav";
       bindings = <
-        &trans  &kp PG_UP   &kp HOME   &kp UP      &kp END      &kp INSERT     &trans  &trans    &trans    &trans  &trans  &trans
-        &trans  &kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &capdance      &trans  &trans    &trans    &trans  &trans  &trans
-        &trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_AGAIN    &trans  &navlock  &numlock  &trans  &trans  &trans
-                                       &trans      &trans       &trans         &trans  &trans    &trans
+        &trans  &kp PG_UP   &kp HOME   &kp UP      &kp END      &kp INSERT     &trans  &base_dance  &trans    &trans  &trans  &trans
+        &trans  &kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &capdance      &trans  &trans       &trans    &trans  &trans  &trans
+        &trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_AGAIN    &trans  &navlock     &numlock  &trans  &trans  &trans
+                                       &trans      &trans       &trans         &trans  &trans       &trans
       >;
     };
 
     Media {
       label = "Media";
       bindings = <
-        &out OUT_USB  &none         &kp K_MUTE    &kp C_VOL_UP       &kp K_MUTE        &none           &trans  &trans      &trans    &trans  &trans  &trans
-        &out OUT_BLE  &none         &kp C_REWIND  &kp C_VOLUME_DOWN  &kp C_FF          &none           &trans  &trans      &trans    &trans  &trans  &trans
-        &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3      &bt BT_SEL 4    &trans  &medialock  &funlock  &trans  &trans  &trans
-                                                  &kp K_MUTE         &kp K_PLAY_PAUSE  &kp K_STOP      &trans  &trans      &trans
+        &out OUT_USB  &none         &kp K_MUTE    &kp C_VOL_UP       &kp K_MUTE        &none           &trans  &base_dance  &trans    &trans  &trans  &trans
+        &out OUT_BLE  &none         &kp C_REWIND  &kp C_VOLUME_DOWN  &kp C_FF          &none           &trans  &trans       &trans    &trans  &trans  &trans
+        &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3      &bt BT_SEL 4    &trans  &medialock   &funlock  &trans  &trans  &trans
+                                                  &kp K_MUTE         &kp K_PLAY_PAUSE  &kp K_STOP      &trans  &trans       &trans
       >;
     };
 
