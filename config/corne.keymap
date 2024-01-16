@@ -198,7 +198,8 @@
   keymap {
     compatible = "zmk,keymap";
 
-    base {
+    Base {
+      label = "Base";
       bindings = <
         &kp LALT   &kp Q           &kp W           &kp F               &kp P             &kp B        &kp J        &kp L              &kp U                &kp Y            &kp SQT     &kp RALT
         &kp LSHFT  &mt LEFT_WIN A  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G        &kp M        &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E  &mt RIGHT_ALT I  &mt RWIN O  &gaminglayer
@@ -208,6 +209,7 @@
     };
 
     Fun {
+      label = "Func";
       bindings = <
         &trans  &trans  &trans  &trans      &base_dance  &trans    &kp PRINTSCREEN  &kp F7     &kp F8   &kp F9  &kp F12  &trans
         &trans  &trans  &trans  &trans      &trans       &trans    &kp SCROLLLOCK   &kp F4     &kp F5   &kp F6  &kp F11  &trans
@@ -217,6 +219,7 @@
     };
 
     Num {
+      label = "Num";
       bindings = <
         &trans  &trans  &trans  &trans    &base_dance  &trans    &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT   &trans
         &trans  &trans  &trans  &trans    &trans       &trans    &kp EQUAL  &kp N4  &kp N5   &kp N6  &kp SEMI   &trans
@@ -226,6 +229,7 @@
     };
 
     Sym {
+      label = "Sym";
       bindings = <
         &trans  &trans  &trans  &trans      &base_dance  &trans    &kp LS(LBRC)   &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RBRC)   &trans
         &trans  &trans  &trans  &trans      &trans       &trans    &kp LS(PLUS)   &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(COLON)  &trans
@@ -235,6 +239,7 @@
     };
 
     Base2 {
+      label = "Base";
       bindings = <
         &kp LALT   &kp Q           &kp W           &kp F               &kp P             &kp B        &kp J        &kp L              &kp U                &kp Y            &kp SQT     &kp RALT
         &kp LSHFT  &mt LEFT_WIN A  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G        &kp M        &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E  &mt RIGHT_ALT I  &mt RWIN O  &gaminglayer
@@ -244,6 +249,7 @@
     };
 
     Mouse {
+      label = "Mouse";
       bindings = <
         &trans  &trans      &trans     &trans      &trans       &trans        &trans  &trans      &trans    &trans  &trans  &trans
         &trans  &none       &trans     &trans      &trans       &trans        &trans  &trans      &trans    &trans  &trans  &trans
@@ -253,6 +259,7 @@
     };
 
     Nav {
+      label = "Nav";
       bindings = <
         &trans  &kp PG_UP   &kp HOME   &kp UP      &kp END      &kp INSERT     &trans  &trans    &trans    &trans  &trans  &trans
         &trans  &kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &capdance      &trans  &trans    &trans    &trans  &trans  &trans
@@ -262,6 +269,7 @@
     };
 
     Media {
+      label = "Media";
       bindings = <
         &out OUT_USB  &none         &kp K_MUTE    &kp C_VOL_UP       &kp K_MUTE        &none           &trans  &trans      &trans    &trans  &trans  &trans
         &out OUT_BLE  &none         &kp C_REWIND  &kp C_VOLUME_DOWN  &kp C_FF          &none           &trans  &trans      &trans    &trans  &trans  &trans
@@ -271,6 +279,7 @@
     };
 
     Qwerty {
+      label = "Qwerty";
       bindings = <
         &kp TAB    &kp Q  &kp W  &kp E      &kp R     &kp T        &kp Y      &kp U     &kp I      &kp O    &kp P     &to 0
         &kp CAPS   &kp A  &kp S  &kp D      &kp F     &kp G        &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
@@ -280,6 +289,7 @@
     };
 
     gaming {
+      label = "Game";
       bindings = <
         &kp N1  &kp TAB    &kp Q  &kp W      &kp E     &kp R        &kp T   &kp Y   &kp U   &kp I      &kp O    &kp P
         &kp N2  &kp LSHFT  &kp A  &kp S      &kp D     &kp F        &kp G   &kp H   &kp J   &kp K      &kp L    &to 0
