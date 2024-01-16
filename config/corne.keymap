@@ -167,10 +167,10 @@
 
     base {
       bindings = <
-        &kp LALT   &kp Q  &kp W  &kp F    &kp P      &kp B      &kp J    &kp L     &kp U      &kp Y    &kp SQT   &kp RALT
-        &kp LSHFT  &kp A  &kp R  &kp S    &kp T      &kp G      &kp M    &kp N     &kp E      &kp I    &kp O     &kp RSHFT
-        &kp LCTRL  &kp Z  &kp X  &kp C    &kp D      &kp V      &kp K    &kp H     &kp COMMA  &kp DOT  &kp FSLH  &kp RCTRL
-                                 &kp ESC  &kp SPACE  &kp TAB    &kp RET  &kp BSPC  &kp DEL
+        &kp LALT   &kp Q           &kp W           &kp F               &kp P             &kp B      &kp J    &kp L              &kp U                &kp Y            &kp SQT     &kp RALT
+        &kp LSHFT  &mt LEFT_WIN A  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G      &kp M    &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E  &mt RIGHT_ALT I  &mt RWIN O  &kp RSHFT
+        &kp LCTRL  &kp Z           &kp X           &kp C               &kp D             &kp V      &kp K    &kp H              &kp COMMA            &kp DOT          &kp FSLH    &kp RCTRL
+                                                   &kp ESC             &kp SPACE         &kp TAB    &kp RET  &kp BSPC           &kp DEL
       >;
 
       sensor-bindings = <&rgbknob RGB_HUI RGB_HUD>, <&rgbknob RGB_BRI RGB_BRD>;
