@@ -267,5 +267,23 @@
                                                 &kp K_MUTE         &kp K_PLAY_PAUSE  &kp K_STOP      &trans  &trans      &trans
       >;
     };
+
+    Qwerty {
+      bindings = <
+        &kp TAB    &kp Q  &kp W  &kp E      &kp R     &kp T        &kp Y      &kp U     &kp I      &kp O    &kp P     &to 0
+        &kp CAPS   &kp A  &kp S  &kp D      &kp F     &kp G        &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+        &kp LSHFT  &kp Z  &kp X  &kp C      &kp V     &kp B        &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                 &kp LCTRL  &kp LALT  &kp SPACE    &kp SPACE  &kp RALT  &kp RCTRL
+      >;
+    };
+
+    gaming {
+      bindings = <
+        &kp N1  &kp TAB    &kp Q  &kp W      &kp E     &kp R        &kp T   &kp Y   &kp U   &kp I      &kp O    &kp P
+        &kp N2  &kp LSHFT  &kp A  &kp S      &kp D     &kp F        &kp G   &kp H   &kp J   &kp K      &kp L    &trans
+        &kp N3  &kp LSHFT  &kp Z  &kp X      &kp C     &kp V        &kp B   &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH
+                                  &kp LCTRL  &kp LALT  &kp SPACE    &trans  &trans  &trans
+      >;
+    };
   };
 };
