@@ -17,6 +17,18 @@
       key-positions = <17 18>;
       bindings = <&caps_word>;
     };
+
+    disconnect0 {
+      bindings = <&bt BT_DISC 0>;
+      key-positions = <25 19>;
+      layers = <7>;
+    };
+
+    disconnect1 {
+      bindings = <&bt BT_DISC 1>;
+      key-positions = <19 26>;
+      layers = <7>;
+    };
   };
 
   macros {
@@ -121,14 +133,63 @@
       #sensor-binding-cells = <2>;
       bindings = <&rgb_ug>, <&rgb_ug>;
     };
+
+    base_dance: base_dance {
+      compatible = "zmk,behavior-tap-dance";
+      label = "BASE_DANCE";
+      #binding-cells = <0>;
+      bindings = <&trans>, <&to 0>;
+    };
+
+    funlock: funlock {
+      compatible = "zmk,behavior-tap-dance";
+      label = "FUNLOCK";
+      #binding-cells = <0>;
+      bindings = <&trans>, <&to 1>;
+    };
+
+    numlock: numlock {
+      compatible = "zmk,behavior-tap-dance";
+      label = "NUMLOCK";
+      #binding-cells = <0>;
+      bindings = <&trans>, <&to 2>;
+    };
+
+    symlock: symlock {
+      compatible = "zmk,behavior-tap-dance";
+      label = "SYMLOCK";
+      #binding-cells = <0>;
+      bindings = <&trans>, <&to 3>;
+    };
+
+    mouselock: mouselock {
+      compatible = "zmk,behavior-tap-dance";
+      label = "MOUSELOCK";
+      #binding-cells = <0>;
+      bindings = <&trans>, <&to 5>;
+    };
+
+    navlock: navlock {
+      compatible = "zmk,behavior-tap-dance";
+      label = "NAVLOCK";
+      #binding-cells = <0>;
+      bindings = <&trans>, <&to 6>;
+    };
+
+    medialock: medialock {
+      compatible = "zmk,behavior-tap-dance";
+      label = "MEDIALOCK";
+      #binding-cells = <0>;
+      bindings = <&trans>, <&to 7>;
+    };
   };
 
   conditional_layers {
     compatible = "zmk,conditional-layers";
 
     tri_layer {
-      if-layers = <1 2>;
-      then-layer = <3>;
+      if-layers = <2 2>;
+      then-layer = <2>;
     };
   };
 
@@ -137,48 +198,73 @@
 
     base {
       bindings = <
-        &kp LALT   &kp Q           &kp W           &kp F               &kp P             &kp B      &kp J    &kp L              &kp U                &kp Y            &kp SQT     &kp RALT
-        &kp LSHFT  &mt LEFT_WIN A  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G      &kp M    &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E  &mt RIGHT_ALT I  &mt RWIN O  &kp RSHFT
-        &kp LCTRL  &kp Z           &kp X           &kp C               &kp D             &kp V      &kp K    &kp H              &kp COMMA            &kp DOT          &kp FSLH    &kp RCTRL
-                                                   &kp ESC             &kp SPACE         &kp TAB    &kp RET  &kp BSPC           &kp DEL
+        &kp LALT   &kp Q           &kp W           &kp F               &kp P             &kp B        &kp J        &kp L              &kp U                &kp Y            &kp SQT     &kp RALT
+        &kp LSHFT  &mt LEFT_WIN A  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G        &kp M        &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E  &mt RIGHT_ALT I  &mt RWIN O  &kp RSHFT
+        &kp LCTRL  &kp Z           &kp X           &kp C               &kp D             &kp V        &kp K        &kp H              &kp COMMA            &kp DOT          &kp FSLH    &kp RCTRL
+                                                   &lt 1 ESC           &lt 2 SPACE       &lt 3 TAB    &lt 5 ENTER  &lt 6 BACKSPACE    &lt 7 DEL
       >;
     };
 
-    raise {
+    Fun {
       bindings = <
-        &trans      &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
-        &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                                &trans        &trans        &trans          &trans  &trans  &trans
-      >;
-
-      sensor-bindings = <&volknob>;
-    };
-
-    lower {
-      bindings = <
-        &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR  &trans
-        &trans  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
-        &trans  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
-                                  &trans    &trans    &trans       &trans     &trans     &trans
+        &trans  &trans  &trans  &trans      &base_dance  &trans    &kp PRINTSCREEN  &kp F7     &kp F8   &kp F9  &kp F12  &trans
+        &trans  &trans  &trans  &trans      &trans       &trans    &kp SCROLLLOCK   &kp F4     &kp F5   &kp F6  &kp F11  &trans
+        &trans  &trans  &trans  &medialock  &funlock     &trans    &kp PAUSE_BREAK  &kp F1     &kp F2   &kp F3  &kp F10  &kp RGUI
+                                &trans      &trans       &trans    &kp TAB          &kp SPACE  &kp ESC
       >;
     };
 
-    both {
+    Num {
       bindings = <
-        &rgb_ug RGB_COLOR_HSB(0,80,60)  &rgb_ug RGB_COLOR_HSB(20,80,60)  &rgb_ug RGB_COLOR_HSB(40,80,60)  &rgb_ug RGB_COLOR_HSB(60,80,60)  &rgb_ug RGB_COLOR_HSB(80,80,60)  &rgb_ug RGB_COLOR_HSB(100,80,60)    &rgb_ug RGB_COLOR_HSB(120,80,60)  &rgb_ug RGB_COLOR_HSB(140,80,60)  &rgb_ug RGB_COLOR_HSB(160,80,60)  &rgb_ug RGB_COLOR_HSB(180,80,60)  &rgb_ug RGB_COLOR_HSB(200,80,60)  &rgb_ug RGB_COLOR_HSB(220,80,60)
-        &rgb_ug RGB_COLOR_HSB(0,60,40)  &rgb_ug RGB_COLOR_HSB(20,60,40)  &rgb_ug RGB_COLOR_HSB(40,60,40)  &rgb_ug RGB_COLOR_HSB(60,60,40)  &rgb_ug RGB_COLOR_HSB(80,60,40)  &rgb_ug RGB_COLOR_HSB(100,60,40)    &rgb_ug RGB_COLOR_HSB(120,60,40)  &rgb_ug RGB_COLOR_HSB(140,60,40)  &rgb_ug RGB_COLOR_HSB(160,60,40)  &rgb_ug RGB_COLOR_HSB(180,60,40)  &rgb_ug RGB_COLOR_HSB(200,60,40)  &rgb_ug RGB_COLOR_HSB(220,60,40)
-        &rgb_ug RGB_COLOR_HSB(0,80,30)  &rgb_ug RGB_COLOR_HSB(20,80,30)  &rgb_ug RGB_COLOR_HSB(40,80,30)  &rgb_ug RGB_COLOR_HSB(60,80,30)  &rgb_ug RGB_COLOR_HSB(80,80,30)  &rgb_ug RGB_COLOR_HSB(100,80,30)    &rgb_ug RGB_COLOR_HSB(120,80,30)  &rgb_ug RGB_COLOR_HSB(140,80,30)  &rgb_ug RGB_COLOR_HSB(160,80,30)  &rgb_ug RGB_COLOR_HSB(180,80,30)  &rgb_ug RGB_COLOR_HSB(200,80,30)  &rgb_ug RGB_COLOR_HSB(220,80,30)
-                                                                                                          &trans                           &trans                           &trans                              &trans                            &trans                            &trans
+        &trans  &trans  &trans  &trans    &base_dance  &trans    &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT   &trans
+        &trans  &trans  &trans  &trans    &trans       &trans    &kp EQUAL  &kp N4  &kp N5   &kp N6  &kp SEMI   &trans
+        &trans  &trans  &trans  &navlock  &numlock     &trans    &kp BSLH   &kp N1  &kp N2   &kp N3  &kp GRAVE  &trans
+                                &trans    &trans       &trans    &kp MINUS  &kp N0  &kp DOT
       >;
     };
 
-    autoshift {
+    Sym {
       bindings = <
-        &trans  &as Q  &as W  &as E   &as R   &as T     &as Y   &as U   &as I   &as O   &as P   &trans
-        &trans  &as A  &as S  &as D   &as F   &as G     &as H   &as J   &as K   &as L   &trans  &trans
-        &trans  &as Z  &as X  &as C   &as V   &as B     &as N   &as M   &trans  &trans  &trans  &trans
-                              &trans  &trans  &trans    &trans  &trans  &trans
+        &trans  &trans  &trans  &trans      &base_dance  &trans    &kp LS(LBRC)   &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RBRC)   &trans
+        &trans  &trans  &trans  &trans      &trans       &trans    &kp LS(PLUS)   &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(COLON)  &trans
+        &trans  &trans  &trans  &mouselock  &symlock     &trans    &kp LS(PIPE)   &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp LS(TILDE)  &trans
+                                &trans      &trans       &trans    &kp LS(UNDER)  &kp LS(LPAR)  &kp LS(RPAR)
+      >;
+    };
+
+    Base2 {
+      bindings = <
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans
+      >;
+    };
+
+    Mouse {
+      bindings = <
+        &trans  &trans      &trans     &trans      &trans       &trans        &trans  &trans      &trans    &trans  &trans  &trans
+        &trans  &none       &trans     &trans      &trans       &trans        &trans  &trans      &trans    &trans  &trans  &trans
+        &trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_REDO    &trans  &mouselock  &symlock  &trans  &trans  &trans
+                                       &mkp MCLK   &mkp LCLK    &mkp RCLK     &trans  &trans      &trans
+      >;
+    };
+
+    Nav {
+      bindings = <
+        &trans  &kp PG_UP   &kp HOME   &kp UP      &kp END      &kp INSERT     &trans  &trans    &trans    &trans  &trans  &trans
+        &trans  &kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &capdance      &trans  &trans    &trans    &trans  &trans  &trans
+        &trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_AGAIN    &trans  &navlock  &numlock  &trans  &trans  &trans
+                                       &trans      &trans       &trans         &trans  &trans    &trans
+      >;
+    };
+
+    Media {
+      bindings = <
+        &trans      &none         &kp K_MUTE    &kp C_VOL_UP       &kp K_MUTE        &none           &trans  &trans      &trans    &trans  &trans  &trans
+        &trans      &none         &kp C_REWIND  &kp C_VOLUME_DOWN  &kp C_FF          &none           &trans  &trans      &trans    &trans  &trans  &trans
+        &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3      &bt BT_SEL 4    &trans  &medialock  &funlock  &trans  &trans  &trans
+                                                &kp K_MUTE         &kp K_PLAY_PAUSE  &kp K_STOP      &trans  &trans      &trans
       >;
     };
   };
