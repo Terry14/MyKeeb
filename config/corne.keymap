@@ -308,5 +308,16 @@
                                   &kp LEFT_ALT  &kp SPACE  &kp LCTRL    &kp ENTER  &kp BACKSPACE  &kp DEL
       >;
     };
+
+    gaming_rh_on_left {
+      bindings = <
+        &kp P     &kp O      &kp I     &kp U   &kp Y   &kp T     &trans  &trans  &trans  &trans  &trans  &trans
+        &kp ESC   &kp L      &kp K     &kp J   &kp H   &kp G     &trans  &trans  &trans  &trans  &trans  &trans
+        &kp CAPS  &kp ENTER  &kp LGUI  &kp M   &kp N   &kp B     &trans  &trans  &trans  &trans  &trans  &trans
+                                       &trans  &trans  &trans    &trans  &trans  &trans
+      >;
+
+      label = "gameRH";
+    };
   };
 };
