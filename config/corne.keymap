@@ -317,7 +317,7 @@
                                        &trans  &trans  &trans    &trans  &trans    &trans
       >;
 
-      label = "gameRH";
+      label = "GameRH";
     };
   };
 };
