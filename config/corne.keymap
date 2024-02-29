@@ -275,7 +275,7 @@
         &trans  &trans      &trans     &trans      &trans       &trans        &kp LBKT   &kp KP_N7  &kp KP_N8   &kp KP_N9  &kp RBKT   &kp KP_NUM
         &trans  &none       &trans     &trans      &trans       &trans        &kp EQUAL  &kp KP_N4  &kp KP_N5   &kp KP_N6  &kp SEMI   &trans
         &trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_REDO    &kp BSLH   &kp KP_N1  &kp KP_N2   &kp KP_N3  &kp GRAVE  &trans
-                                       &mkp MB3    &mkp MB1     &mkp MB2      &trans     &kp KP_N1  &kp KP_DOT
+                                       &mkp MB3    &mkp MB1     &mkp MB2      &trans     &kp KP_N0  &kp KP_DOT
       >;
     };
 
