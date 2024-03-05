@@ -222,9 +222,9 @@
     Base {
       label = "Base";
       bindings = <
-        &kp LALT   &kp Q            &kp W            &kp F                &kp P          &kp B        &kp J        &kp L            &kp U                 &kp Y             &kp SQT      &kp F24
-        &kp LSHFT  &tph LEFT_WIN A  &tph LEFT_ALT R  &tph LEFT_CONTROL S  &tph LSHIFT T  &kp G        &kp M        &tph RSHIFT N    &tph RIGHT_CONTROL E  &tph RIGHT_ALT I  &tph RWIN O  &gaminglayer
-        &kp LCTRL  &kp Z            &kp X            &kp C                &kp D          &kp V        &kp K        &kp H            &kp COMMA             &kp DOT           &kp FSLH     &kp RCTRL
+        &kp LALT   &kp Q            &kp W            &kp F                &kp P          &kp B        &kp J        &kp L            &kp U                    &kp Y              &kp SQT         &kp F24
+        &kp LSHFT  &kp A            &kp R            &kp S                &kp T          &kp G        &kp M        &kp N            &kp E                    &kp I              &kp O           &gaminglayer
+        &kp LCTRL  &tph LEFT_WIN Z  &tph LEFT_ALT X  &tph LEFT_CONTROL C  &tph LSHIFT D  &kp V        &kp K        &tph RSHIFT H    &tph RIGHT_CONTROL COMMA &tph RIGHT_ALT DOT &tph RWIN FSLH  &kp RCTRL
                                                      &lt 1 ESC            &lt 2 SPACE    &lt 3 TAB    &lt 5 ENTER  &lt 6 BACKSPACE  &lt 7 DEL
       >;
     };
@@ -262,12 +262,13 @@
     Base2 {
       label = "Base2";
       bindings = <
-        &kp LALT   &kp Q            &kp W            &kp F                &kp P              &kp B        &kp J        &kp L               &kp U                 &kp Y             &kp SQT      &kp F24
-        &kp LSHFT  &tph LEFT_WIN A  &tph LEFT_ALT R  &tph LEFT_CONTROL S  &tph LEFT_SHIFT T  &kp G        &kp M        &tph RIGHT_SHIFT N  &tph RIGHT_CONTROL E  &tph RIGHT_ALT I  &tph RWIN O  &gaminglayer
-        &kp LCTRL  &kp Z            &kp X            &kp C                &kp D              &kp V        &kp K        &kp H               &kp COMMA             &kp DOT           &kp FSLH     &kp RCTRL
-                                                     &lt 1 ESC            &lt 2 SPACE        &lt 3 TAB    &lt 5 ENTER  &lt 6 BACKSPACE     &lt 7 DEL
+        &kp LALT   &kp Q            &kp W            &kp F                &kp P          &kp B        &kp J        &kp L            &kp U                    &kp Y              &kp SQT         &kp F24
+        &kp LSHFT  &kp A            &kp R            &kp S                &kp T          &kp G        &kp M        &kp N            &kp E                    &kp I              &kp O           &gaminglayer
+        &kp LCTRL  &tph LEFT_WIN Z  &tph LEFT_ALT X  &tph LEFT_CONTROL C  &tph LSHIFT D  &kp V        &kp K        &tph RSHIFT H    &tph RIGHT_CONTROL COMMA &tph RIGHT_ALT DOT &tph RWIN FSLH  &kp RCTRL
+                                                     &lt 1 ESC            &lt 2 SPACE    &lt 3 TAB    &lt 5 ENTER  &lt 6 BACKSPACE  &lt 7 DEL
       >;
     };
+
 
     Mouse {
       label = "Mouse";
