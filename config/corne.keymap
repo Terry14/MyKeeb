@@ -233,8 +233,8 @@
       label = "Func";
       bindings = <
         &trans  &trans  &trans  &trans      &base_dance  &trans    &kp PRINTSCREEN  &kp F7     &kp F8   &kp F9  &kp F12  &trans
-        &trans  &trans  &trans  &trans      &trans       &trans    &kp SCROLLLOCK   &kp F4     &kp F5   &kp F6  &kp F11  &trans
-        &trans  &trans  &trans  &medialock  &funlock     &trans    &kp PAUSE_BREAK  &kp F1     &kp F2   &kp F3  &kp F10  &kp RGUI
+        &trans  &trans  &trans  &medialock  &funlock     &trans    &kp SCROLLLOCK   &kp F4     &kp F5   &kp F6  &kp F11  &trans
+        &trans  &trans  &trans  &trans      &trans       &trans    &kp PAUSE_BREAK  &kp F1     &kp F2   &kp F3  &kp F10  &kp RGUI
                                 &trans      &trans       &trans    &kp TAB          &kp SPACE  &kp ESC
       >;
     };
@@ -242,10 +242,10 @@
     Num {
       label = "Num";
       bindings = <
-        &trans  &trans  &trans  &trans  &base_dance  &trans    &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT   &kp KP_NUMLOCK
-        &trans  &trans  &trans  &trans  &trans       &trans    &kp EQUAL  &kp N4  &kp N5   &kp N6  &kp SEMI   &kp SCROLLLOCK
-        &trans  &trans  &trans  &trans  &trans       &trans    &kp BSLH   &kp N1  &kp N2   &kp N3  &kp GRAVE  &trans
-                                &trans  &trans       &trans    &kp MINUS  &kp N0  &kp DOT
+        &trans  &trans  &trans  &trans    &base_dance  &trans    &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT   &kp KP_NUMLOCK
+        &trans  &trans  &trans  &navlock  &numlock     &trans    &kp EQUAL  &kp N4  &kp N5   &kp N6  &kp SEMI   &kp SCROLLLOCK
+        &trans  &trans  &trans  &trans    &trans       &trans    &kp BSLH   &kp N1  &kp N2   &kp N3  &kp GRAVE  &trans
+                                &trans    &trans       &trans    &kp MINUS  &kp N0  &kp DOT
       >;
     };
 
@@ -253,8 +253,8 @@
       label = "Sym";
       bindings = <
         &trans  &trans  &trans  &trans      &base_dance  &trans    &kp LS(LBRC)   &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RBRC)   &trans
-        &trans  &trans  &trans  &trans      &trans       &trans    &kp LS(PLUS)   &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(COLON)  &trans
-        &trans  &trans  &trans  &mouselock  &symlock     &trans    &kp LS(PIPE)   &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp LS(TILDE)  &trans
+        &trans  &trans  &trans  &mouselock  &symlock     &trans    &kp LS(PLUS)   &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(COLON)  &trans
+        &trans  &trans  &trans  &trans      &trans       &trans    &kp LS(PIPE)   &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp LS(TILDE)  &trans
                                 &trans      &trans       &trans    &kp LS(UNDER)  &kp LS(LPAR)  &kp LS(RPAR)
       >;
     };
@@ -282,9 +282,9 @@
     Nav {
       label = "Nav";
       bindings = <
-        &trans  &kp PG_UP   &kp HOME   &kp UP      &kp END      &kp INSERT     &trans  &base_dance  &trans    &trans  &trans  &trans
-        &trans  &kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &capdance      &trans  &trans       &trans    &trans  &trans  &trans
-        &trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_AGAIN    &trans  &navlock     &numlock  &trans  &trans  &trans
+        &trans  &kp PG_UP   &kp HOME   &kp UP      &kp END      &kp INSERT     &trans  &base_dance  &trans  &trans  &trans  &trans
+        &trans  &kp PG_DN   &kp LEFT   &kp DOWN    &kp RIGHT    &capdance      &trans  &navlock     &trans  &trans  &trans  &trans
+        &trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_AGAIN    &trans  &trans       &trans  &trans  &trans  &trans
                                        &trans      &trans       &trans         &trans  &trans       &trans
       >;
     };
@@ -293,8 +293,8 @@
       label = "Media";
       bindings = <
         &out OUT_USB  &none         &kp K_MUTE    &kp C_VOL_UP       &kp K_MUTE        &none           &trans  &base_dance  &trans    &trans  &trans  &trans
-        &out OUT_BLE  &none         &kp C_REWIND  &kp C_VOLUME_DOWN  &kp C_FF          &none           &trans  &trans       &trans    &trans  &trans  &trans
-        &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3      &bt BT_SEL 4    &trans  &medialock   &funlock  &trans  &trans  &trans
+        &out OUT_BLE  &none         &kp C_REWIND  &kp C_VOLUME_DOWN  &kp C_FF          &none           &trans  &medialock   &funlock  &trans  &trans  &trans
+        &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3      &bt BT_SEL 4    &trans  &trans       &trans    &trans  &trans  &trans
                                                   &kp K_MUTE         &kp K_PLAY_PAUSE  &kp K_STOP      &trans  &trans       &trans
       >;
     };
