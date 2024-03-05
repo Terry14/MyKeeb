@@ -222,9 +222,9 @@
     Base {
       label = "Base";
       bindings = <
-        &kp LALT   &kp Q            &kp W            &kp F                &kp P          &kp B        &kp J        &kp L            &kp U                    &kp Y              &kp SQT         &kp F24
-        &kp LSHFT  &kp A            &kp R            &kp S                &kp T          &kp G        &kp M        &kp N            &kp E                    &kp I              &kp O           &gaminglayer
-        &kp LCTRL  &tph LEFT_WIN Z  &tph LEFT_ALT X  &tph LEFT_CONTROL C  &tph LSHIFT D  &kp V        &kp K        &tph RSHIFT H    &tph RIGHT_CONTROL COMMA &tph RIGHT_ALT DOT &tph RWIN FSLH  &kp RCTRL
+        &kp LALT   &kp Q            &kp W            &kp F                &kp P          &kp B        &kp J        &kp L            &kp U                     &kp Y               &kp SQT         &kp F24
+        &kp LSHFT  &kp A            &kp R            &kp S                &kp T          &kp G        &kp M        &kp N            &kp E                     &kp I               &kp O           &gaminglayer
+        &kp LCTRL  &tph LEFT_WIN Z  &tph LEFT_ALT X  &tph LEFT_CONTROL C  &tph LSHIFT D  &kp V        &kp K        &tph RSHIFT H    &tph RIGHT_CONTROL COMMA  &tph RIGHT_ALT DOT  &tph RWIN FSLH  &kp RCTRL
                                                      &lt 1 ESC            &lt 2 SPACE    &lt 3 TAB    &lt 5 ENTER  &lt 6 BACKSPACE  &lt 7 DEL
       >;
     };
@@ -242,10 +242,10 @@
     Num {
       label = "Num";
       bindings = <
-        &trans  &trans  &trans  &trans    &base_dance  &trans    &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT   &kp KP_NUMLOCK
-        &trans  &trans  &trans  &trans    &trans       &trans    &kp EQUAL  &kp N4  &kp N5   &kp N6  &kp SEMI   &trans
-        &trans  &trans  &trans  &navlock  &numlock     &trans    &kp BSLH   &kp N1  &kp N2   &kp N3  &kp GRAVE  &trans
-                                &trans    &trans       &trans    &kp MINUS  &kp N0  &kp DOT
+        &trans  &trans  &trans  &trans  &base_dance  &trans    &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT   &kp KP_NUMLOCK
+        &trans  &trans  &trans  &trans  &trans       &trans    &kp EQUAL  &kp N4  &kp N5   &kp N6  &kp SEMI   &kp SCROLLLOCK
+        &trans  &trans  &trans  &trans  &trans       &trans    &kp BSLH   &kp N1  &kp N2   &kp N3  &kp GRAVE  &trans
+                                &trans  &trans       &trans    &kp MINUS  &kp N0  &kp DOT
       >;
     };
 
@@ -262,13 +262,12 @@
     Base2 {
       label = "Base2";
       bindings = <
-        &kp LALT   &kp Q            &kp W            &kp F                &kp P          &kp B        &kp J        &kp L            &kp U                    &kp Y              &kp SQT         &kp F24
-        &kp LSHFT  &kp A            &kp R            &kp S                &kp T          &kp G        &kp M        &kp N            &kp E                    &kp I              &kp O           &gaminglayer
-        &kp LCTRL  &tph LEFT_WIN Z  &tph LEFT_ALT X  &tph LEFT_CONTROL C  &tph LSHIFT D  &kp V        &kp K        &tph RSHIFT H    &tph RIGHT_CONTROL COMMA &tph RIGHT_ALT DOT &tph RWIN FSLH  &kp RCTRL
+        &kp LALT   &kp Q            &kp W            &kp F                &kp P          &kp B        &kp J        &kp L            &kp U                     &kp Y               &kp SQT         &kp F24
+        &kp LSHFT  &kp A            &kp R            &kp S                &kp T          &kp G        &kp M        &kp N            &kp E                     &kp I               &kp O           &gaminglayer
+        &kp LCTRL  &tph LEFT_WIN Z  &tph LEFT_ALT X  &tph LEFT_CONTROL C  &tph LSHIFT D  &kp V        &kp K        &tph RSHIFT H    &tph RIGHT_CONTROL COMMA  &tph RIGHT_ALT DOT  &tph RWIN FSLH  &kp RCTRL
                                                      &lt 1 ESC            &lt 2 SPACE    &lt 3 TAB    &lt 5 ENTER  &lt 6 BACKSPACE  &lt 7 DEL
       >;
     };
-
 
     Mouse {
       label = "Mouse";
