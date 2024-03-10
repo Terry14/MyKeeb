@@ -31,17 +31,6 @@
       key-positions = <19 26>;
       layers = <7>;
     };
-
-    gaming_esc {
-      bindings = <&kp ESC>;
-      key-positions = <0 1>;
-      layers = <8>;
-    };
-
-    gaming_enter {
-      bindings = <&kp ENTER>;
-      key-positions = <12 13>;
-    };
   };
 
   macros {
