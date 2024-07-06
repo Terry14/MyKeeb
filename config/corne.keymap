@@ -189,7 +189,7 @@
       compatible = "zmk,behavior-tap-dance";
       label = "GAMINGLAYER";
       #binding-cells = <0>;
-      bindings = <&to 0>, <&to 8>;
+      bindings = <&to 0>, <&to 10>;
     };
 
     tph: tph {
@@ -307,6 +307,16 @@
       >;
 
       label = "GameRH";
+    };
+
+    Gaming2 {
+      label = "Game2";
+      bindings = <
+        &kp N1  &kp TAB    &kp Q  &kp W         &kp E      &kp R    &kp T      &kp Y          &kp UP    &kp I      &kp O    &kp P
+        &kp N2  &kp LSHFT  &kp A  &kp S         &kp D      &kp F    &kp G      &kp LEFT       &kp DOWN  &kp RIGHT  &kp L    &gaminglayer
+        &kp N3  &kp LCTRL  &kp Z  &kp X         &kp C      &kp V    &kp B      &kp N          &kp M     &kp COMMA  &kp DOT  &kp PRINTSCREEN
+                                  &kp LEFT_ALT  &kp SPACE  &mo 9    &kp ENTER  &kp BACKSPACE  &kp DEL
+      >;
     };
   };
 };
